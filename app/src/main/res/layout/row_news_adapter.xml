@@ -1,12 +1,14 @@
-<LinearLayout
-
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     android:padding="15dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
     
-    
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/image_view"
+        android:layout_alignParentLeft="true"/>
     <TextView
         android:textSize="22dp"
         android:text="Title"
@@ -14,22 +16,26 @@
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/image_view"
         android:id="@+id/text_view_title"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18dp"
+        android:layout_toRightOf="@id/image_view"
+        android:layout_below="@id/text_view_title"
         android:id="@+id/text_view_author"/>
 
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#000"/>
+        android:background="#000"
+        android:layout_below="@id/text_view_author"/>
 
 
 
 
 
-</LinearLayout>
+</RelativeLayout>
